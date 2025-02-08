@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+<body>
+    <p>Welcome to my forecast site!
+        <a href="{% url 'admin:index' %}", style="text-decoration: none;">ADMIN</a>
+    </p>
+    {% block body %}
+        <a href="{% url 'weather_index' %}", style="text-decoration: none;">LINK INDEX WEATHER!</a>
+    {% endblock %}
+</body>
+</html>
