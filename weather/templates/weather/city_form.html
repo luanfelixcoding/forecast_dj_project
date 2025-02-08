@@ -1,0 +1,12 @@
+{% extends 'projeto/home.html' %}
+
+{% block title %}Create City{% endblock %}
+
+{% block body %}
+<h2>Create New City</h2>
+<hr>
+<form method="post">{% csrf_token %}
+        {{ form.as_div }}
+        <input type="submit" value="Create New City"/>
+</form>
+{% endblock %}
