@@ -8,7 +8,10 @@
 
     <ul>
         {% for city in cities %}
-            <li>{{ city.name }} - {{ city.state }}</li>
+            <li>
+                {{ city.name }} - {{ city.state }}
+                <a href="{% url 'previsao' city.pk %}">Forecast</a>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}
